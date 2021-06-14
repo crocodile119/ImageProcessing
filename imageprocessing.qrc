@@ -1,0 +1,46 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/abacus.png</file>
+        <file>images/arrow.png</file>
+        <file>images/compute.png</file>
+        <file>images/edit.png</file>
+        <file>images/ico.png</file>
+        <file>images/lente.png</file>
+        <file>images/new.png</file>
+        <file>images/open.png</file>
+        <file>images/options.png</file>
+        <file>images/print.png</file>
+        <file>images/redo.png</file>
+        <file>images/save.png</file>
+        <file>images/saveAs - Copia.png</file>
+        <file>images/saveAs.png</file>
+        <file>images/undo.png</file>
+        <file>images/zoom+.png</file>
+        <file>images/zoom-.png</file>
+        <file>images/normalize.png</file>
+        <file>images/zoomFit.png</file>
+        <file>images/bilateral.png</file>
+        <file>images/median.png</file>
+        <file>images/gaussian.png</file>
+        <file>images/laplacian.png</file>
+        <file>images/sobel.png</file>
+        <file>images/blur.png</file>
+        <file>images/reject.png</file>
+        <file>images/accept.png</file>
+        <file>images/sobelActive.png</file>
+        <file>images/roi.png</file>
+        <file>images/selection.png</file>
+        <file>images/drag.png</file>
+        <file>images/histogram.png</file>
+        <file>images/equalize.png</file>
+        <file>images/negative.png</file>
+        <file>images/log.png</file>
+        <file>images/inv.png</file>
+        <file>images/pow.png</file>
+        <file>images/slice.png</file>
+        <file>images/canny.png</file>
+        <file>images/dilate.png</file>
+        <file>images/erode.png</file>
+        <file>images/close-open.png</file>
+    </qresource>
+</RCC>

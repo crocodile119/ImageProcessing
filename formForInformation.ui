@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>944</width>
+    <height>846</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_5">
+    <item row="0" column="0">
+     <widget class="QTextEdit" name="textEdit"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>944</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QDockWidget" name="dockWidget">
+   <attribute name="dockWidgetArea">
+    <number>2</number>
+   </attribute>
+   <widget class="QWidget" name="controlDockWidget">
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QTreeWidget" name="treeWidget">
+       <property name="columnCount">
+        <number>1</number>
+       </property>
+       <attribute name="headerVisible">
+        <bool>false</bool>
+       </attribute>
+       <attribute name="headerCascadingSectionResizes">
+        <bool>true</bool>
+       </attribute>
+       <attribute name="headerDefaultSectionSize">
+        <number>200</number>
+       </attribute>
+       <attribute name="headerHighlightSections">
+        <bool>false</bool>
+       </attribute>
+       <attribute name="headerMinimumSectionSize">
+        <number>200</number>
+       </attribute>
+       <attribute name="headerStretchLastSection">
+        <bool>true</bool>
+       </attribute>
+       <column>
+        <property name="text">
+         <string notr="true">riduci livelli</string>
+        </property>
+       </column>
+       <item>
+        <property name="text">
+         <string>aggiungi disturbo</string>
+        </property>
+        <item>
+         <property name="text">
+          <string>rumore gaussiano</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>rumore salt and pepper</string>
+         </property>
+        </item>
+       </item>
+       <item>
+        <property name="text">
+         <string>riduci livelli</string>
+        </property>
+        <item>
+         <property name="text">
+          <string>2 livelli</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>4 livelli</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>8 livelli</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>16 livelli</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>32 livelli</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>64 livelli</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>128 livelli</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>256 livelli</string>
+         </property>
+        </item>
+       </item>
+       <item>
+        <property name="text">
+         <string>riduci livelli di grigio</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item>
+      <widget class="QTextEdit" name="textEdit_2"/>
+     </item>
+     <item>
+      <spacer name="slicingVerticalSpacer">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>17</width>
+         <height>153</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
