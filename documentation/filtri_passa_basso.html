@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <title>Filtri di smoothing</title>
+
+
+  <link rel="stylesheet" href="style.css" type="text/css">
+
+</head>
+
+
+<body>
+
+<h2>Filtri passa basso</h2>
+
+<p>Il sono noti anche con i termini <b>Smoothing</b>,
+in
+italiano levigatura, spianatura, o <b>blurring</b>,
+quest'ultimo essendo un termine molto usuale
+nell'elaborazione delle
+immagini. Possono esserci diversi motivi per impiegare i filtri di
+smoothing in questo caso concentreremo l'attenzione sull'impiego che se
+ne fa per la riduzione del rumore.
+I tipi di filtro pi&ugrave; comuni sono quelli lineari nei quali il
+valore del pixel in uscita (ad esempio <b>g ( i,j )</b>)
+&egrave; ricavato come la somma pesata dei pixel in ingresso (ad
+esempio <b>f (i+k, j+l)</b>):</p>
+
+<div id="image"><img style="width: 273px; height: 56px;" src="images/smooth_output_pixel.jpg" alt="output pixel">
+</div>
+
+<h3>Filtro con maschera normalizzata</h3>
+
+<p>Questo filtro &egrave; quello pi&ugrave; sempice di
+tutti ,
+ciascun pixel &egrave; la media dei suoi vicini (ciascuno di essi
+contribuisce con ugual peso).
+Di seguito si riporta il kernel.</p>
+
+<div id="image"><img style="width: 344px; height: 140px;" src="images/smooth_kernel.jpg" alt="output pixel"></div>
+
+<h3>Filtro gaussiano</h3>
+
+<p>Probabilmente il filtro pi&ugrave; utile sebbene non sia
+quello pi&ugrave; veloce. Il filtro gaussiano viene realizzato
+convolendo ciascun punto della matrice di ingresso con un kernel
+gaussiano e quindi sommando i valori ottenuti producendo
+perci&ograve; la matrice di uscita.
+Per rendere pi&ugrave; chiaro il concetto se si supppone che
+l'immagine dia monodimensionale allora il pixel posizionato al centro
+avrebbe
+il peso maggiore.</p>
+
+<div id="image"><img style="width: 249px; height: 202px;" src="images/Smoothing_Tutorial_theory_gaussian_0.jpg" alt="gaussiana"></div>
+
+<p>Il peso dei pixel vicini diminuisce con la distanza tra di
+essi e il pixel centrale.
+Si ricorda inoltre che una gaussiana bidimensionale pu&ograve;
+essere rappresentata come:</p>
+
+<div id="image"><img style="width: 329px; height: 71px;" src="images/smooth_gaussian.jpg" alt="gaussiana bidimensionale"></div>
+
+<h3>Filtro mediano</h3>
+
+<p>Il filtro mediano scorre attraverso ogni elemento del segnale
+(in
+questo caso l'immagine) e sostituisce ciascun pixel con la mediana dei
+pixel adiacenti (situati in un quadrato attorno al pixel valutato).</p>
+
+<h3>Filtro bilaterale</h3>
+
+<p>Finora, abbiamo spiegato alcuni filtri il cui obiettivo
+principale &egrave; quello di uniformare un'immagine di input.
+Tuttavia, a volte i filtri non solo dissolvono il rumore&nbsp; ma
+levigano
+anche i bordi. Per evitare ci&ograve; (almeno in una certa misura),
+possiamo
+usare un filtro bilaterale.
+Analogamente al filtro gaussiano, il filtro bilaterale
+considera anche i pixel vicini con pesi assegnati a ciascuno di essi.
+Questi pesi hanno due componenti, il primo&nbsp;&egrave; lo
+stesso peso usato dal filtro gaussiano, il secondo invece tiene
+conto della differenza di intensit&agrave; tra i pixel vicini e
+quello valutato.
+Per una spiegazione pi&ugrave; dettagliata si faccia riferimento
+a <a href="http://homepages.inf.ed.ac.uk/rbf/CVonline/LOCAL_COPIES/MANDUCHI1/Bilateral_Filtering.html">Bilateral Filtering for Gray and Color Images</a>.
+&nbsp;
+</p>
+
+<p>Vedi anche: <a href="file:///C:/Users/c_giordano1/Desktop/image%20processing%20help/operatore_sobel.html">Operatore
+di Sobel</a>, <a href="operatore_laplaciano.html">Operatore
+di Laplace</a>.</p>
+
+<br>
+
+</body>
+</html>

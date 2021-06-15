@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <title>Trasformazioni puntuali</title>
+
+
+  <link rel="stylesheet" href="style.css" type="text/css">
+
+</head>
+
+
+<body>
+
+<h2>Traformazioni puntuali</h2>
+
+<p>Le trasformazioni puntuali sono legate dalla relazione <b>s
+= T(r)</b>
+dove <b>T(r)</b> &egrave;
+una trasformazione che mappa il valore di <b>r</b> di un
+pixel nel
+corrispondente valore <b>s</b>.
+</p>
+
+<h3>Negativo dell'immagine</h3>
+
+<p>Il negativo di un immagine con livelli di intensit&agrave;
+nella
+gamma <b>[0, L-1]</b> si ottiene utilizzando la
+trasformazione negativa che &egrave; data
+dall'equazione:</p>
+
+<div style="text-align: center;" class="formula"><b>s
+= L - 1 - r</b>
+</div>
+
+Invertendo i livelli di intensit&agrave; si genera l'equivalente di
+un
+negativo fotografico.
+<h3>Trasformazioni logaritmiche</h3>
+
+<p>La forma generale della trasformazione logaritmica
+&egrave;
+</p>
+
+<div style="text-align: center;" class="formula"><b>s
+= c log (r + 1)</b>
+</div>
+
+<p>dove c &egrave; una costante e si presuppone che <b>r
+&ge; 0</b>.</p>
+
+<div style="text-align: center;" class="image"> <img style="width: 429px; height: 406px;" src="images/logarithm_diagram.jpg" alt="logarithm function"></div>
+
+<p>La forma della curva logaritmica mostra che questa
+trasformazione
+associa una stretta
+gamma di valori a bassa intensit&agrave; una gamma pi&ugrave;
+ampia di valori di
+output. Si verifica il contrario con valori pi&ugrave; alti dei
+livelli di
+input.
+La funzione logaritmica ha l'importante caratteristica di comprimere la
+gamma dinamica delle immagini che presentano ampie variazioni dei
+valori dei pixel. Un classico esempio &egrave; lo spettro di
+Fourier.</p>
+
+<p>Oltre alla trasformazione logaritmo &egrave; possibile
+impiegare la <b>trasformazione logaritmica inversa</b>
+nella quale,
+diversamente dalla trasformazione logaritmica, un'ampia gamma di di
+valori a bassa intensit&agrave; &egrave; associata ad una gamma
+pi&ugrave; stretta in ragione di una trasformazione logaritmica
+inversa.
+</p>
+
+<h3>Trasformazioni potenza o gamma</h3>
+
+<p>Le trasformazioni di potenza hanno la forma di base:</p>
+
+<div style="text-align: center;" class="formula"><b>s
+= c
+r <small><sup>&gamma;</sup></small></b></div>
+
+<p>dove c e &gamma; sono costanti positive.
+</p>
+
+<div style="text-align: center;" class="image"> <img style="width: 409px; height: 385px;" src="images/power_diagram.jpg" alt="power function"></div>
+
+Come nel caso delle trasformazioni logaritmiche, le curve di potenza
+con i valori frazionali di &gamma; trasformano una stretta gamma di
+valori
+scuri in una gamma pi&ugrave; ampia di valori di output. Al
+contrario delle
+funzioni logaritmiche in questo caso &egrave; possibile ottenere un
+insieme di
+possibili curve semplicemente variando &gamma;. Come &egrave;
+noto le curve generate
+con valori di &gamma; &gt;1 hanno esattamente l'effetto opposto
+a quelle
+generate con valori di &gamma; &lt; 1. Normalmente l'esponente
+&egrave; indicato
+con la lettera greca &gamma; da cui discende il nome di
+trasformazione &gamma;.
+Un approccio alternativo ai metodi presentati precedentemente
+&egrave; l'uso
+di funzioni lineari a tratti.
+<h3>Amplitude Level Slicing</h3>
+
+<p> Assegnati due valori di soglia, bassa <b ="">&lt;(L)</b> ed alta <b>(H)</b>,
+si portano a
+bianco i livelli compresi fra esse.</p>
+
+<div style="text-align: center;" class="image"> <img style="width: 453px; height: 216px;" src="images/slice_diagram.jpg" alt="slice function"></div>
+
+<p>I livelli rimanenti possono:</p>
+
+<ul>
+
+  <li>essere messi a zero, in questo caso si parla di <b>Zero
+Background Level Slicing</b>;</li>
+
+  <li>lasciati invariati con la funzione identit&agrave;, in
+questo caso
+si parla di <b>Image Background Level Slicing</b>.</li>
+
+</ul>
+
+<br>
+
+<br>
+
+</body>
+</html>

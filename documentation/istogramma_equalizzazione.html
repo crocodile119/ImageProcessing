@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <title>Istogramma ed equalizzazione</title>
+
+
+  <link rel="stylesheet" href="style.css" type="text/css">
+
+</head>
+
+
+<body>
+
+<h2>Istogramma di un'immagine</h2>
+
+<p>Nella de&#64257;nizione delle elaborazioni puntuali assume notevole
+importanza
+l&rsquo;istogramma dell&rsquo;immagine. Essa &egrave;
+de&#64257;nita come
+una tabella o funzione
+nella quale si memorizzano, per ciascuno dei 256 possibili livelli di
+grigio, il numero di punti dell&rsquo;immagine che assumono proprio
+quel
+valore. Nell'istogramma di un immagine, di solito, ciascun valore
+&egrave; diviso
+per il numero complessivo dei pixel dell'immagine.
+In queso modo ciascuna elemento dell'istogamma &egrave;
+interpretabile come la
+probabilit&agrave; di occorrenza del pixel considerato.</p>
+
+<h2>Equalizzazione</h2>
+
+<p>Normalmente i vantaggi dell'equalizzazione di un immagine sono
+il maggior contrasto e e leggibilit&agrave; rispetto all'immagine
+di partenza.
+Per il processo di equalizzazione forniamo un'interpretazione
+qualitativa quelli interessati ad un'analisi pi&ugrave;
+approfondita possono
+consultare un qualsiasi testo di elaborazione delle immagini.
+L'obiettivo dell'equalizzazione &egrave; quello di rendere
+l&rsquo;istogramma il
+pi&ugrave; piatto possibile. Per realizzarla si segue lo schema
+seguente:
+supponiamo
+che l&rsquo;immagine di partenza sia di dimensioni
+512, 512, ovvero che sia
+composta da 2<small><sup>18</sup></small> punti. Questo signi&#64257;ca che, detto H(i)
+l&rsquo;istogramma,
+deve valere che &Sigma; <small><sub>i=0</sub></small>
+<small><sup>255</sup></small>
+H(i) = 2 <small><sup>18 </sup></small>.
+</p>
+
+<p>Se vogliamo rendere
+l&rsquo;istogramma
+piatto dovr&agrave; essere: </p>
+
+<div id="formula">
+H(i) = 2 <small><sup>18 </sup></small>/
+256 = 2<small><sup>10</sup></small> =
+1024</div>
+
+<p>Naturalmente non potremo
+ottenere
+proprio
+l&rsquo;uguaglianza, visto
+i limiti
+dell&rsquo;elaborazione, ma vogliamo avvicinarci il piu` possibile.
+Proviamo
+a fare un esempio di elaborazione, supponendo che
+l&rsquo;istogramma di
+ingresso sia quello a destra in &#64257;gura.</p>
+
+<div id="image"><img style="width: 500px; height: 241px;" src="images/equalizzazione.jpg" alt="esempio di equalizzazione"></div>
+
+<p>Nel primo livello di uscita
+vorremmo ottenere 1024: se sommiamo i primi tre livelli (0, 1 e 2)
+dell&rsquo;ingresso otteniamo 800, se sommiamo i primi quattro
+1600. Poich&eacute;
+800 &egrave; pi&ugrave; vicino a 1024 di 1600 scegliamo di
+sommare i primi tre.
+Passiamo al secondo livello dell&rsquo;uscita: anche lui dovrebbe
+essere
+riempito con 1024 livelli ma, per evitare accumuli
+dell&rsquo;errore, bisogna
+considerare che nei primi due livelli voglio 1024 + 1024 = 2048 punti.
+Siccome nel primo ne ho gia` messo 800 dovr`o cercare di approssimare,
+per il secondo, il valore di 1248. Quindi scelgo di inserire i livelli
+3 e 4 dell&rsquo;ingresso, visto che 800 + 700 = 1500 `e piu`
+vicino a 1248
+di 800. Nel terzo livello di uscita ci va ancora 1024 e la somma dei
+primi tre deve essere 3072. Ne ho gia` sistemato 800 + 1500 = 2300 e
+quindi ne restano 772. Poich`e il primo livello da sistemare
+dell&rsquo;ingresso (il 5) vale 1600 e 1600&minus;772 = 828
+lascio vuoto il terzo
+livello dell&rsquo;uscita. Nel quarto livello di uscita devo
+approssimare
+4096&minus;2300 = 1996, se inserisco il livello di ingresso 5 ne
+mancano 396,
+se inserisco 5 + 6 ne avanzano 2600&minus;1996 = 604 quindi scelgo
+5. E cos`&#305;
+via per gli altri livelli. Riporto una tabella utile per seguire il
+ragionamento.</p>
+
+<p>
+</p>
+
+<table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="2">
+
+  <tbody>
+
+    <tr>
+
+      <td style="font-weight: bold; text-align: center;">Out</td>
+
+      <td style="font-weight: bold; text-align: center;">Somma</td>
+
+      <td style="font-weight: bold; text-align: center;">Resto</td>
+
+      <td style="font-weight: bold; text-align: center;">Difetto</td>
+
+      <td style="font-weight: bold; text-align: center;">Eccesso</td>
+
+      <td style="font-weight: bold; text-align: center;">Scelto</td>
+
+    </tr>
+
+    <tr>
+
+      <td style="text-align: center;">0<br>
+
+1<br>
+
+2<br>
+
+3<br>
+
+      </td>
+
+      <td style="text-align: center;">1024<br>
+
+2048<br>
+
+3072<br>
+
+4096<br>
+
+      </td>
+
+      <td style="text-align: center;">1024<br>
+
+1248<br>
+
+772<br>
+
+1996<br>
+
+      </td>
+
+      <td style="text-align: center;">0+1+2=800<br>
+
+3=800<br>
+
+0<br>
+
+5=1600<br>
+
+      </td>
+
+      <td style="text-align: center;">0+1+2+3=1600<br>
+
+3+4=1500<br>
+
+5=1600<br>
+
+5+6=2600<br>
+
+      </td>
+
+      <td style="text-align: center;">0, 1, 2<br>
+
+3, 4<br>
+
+-<br>
+
+5<br>
+
+      </td>
+
+    </tr>
+
+  </tbody>
+</table>
+
+</body>
+</html>

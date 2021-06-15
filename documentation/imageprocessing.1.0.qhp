@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <QtHelpProject version="1.0">
+      <namespace>ing.giordano.qt.imageprocessing</namespace>
+      <virtualFolder>doc</virtualFolder>
+      <customFilter name="Image Processing 1.0">
+          <filterAttribute>ImageProcessing</filterAttribute>
+          <filterAttribute>1.0</filterAttribute>
+      </customFilter>
+      <filterSection>
+          <filterAttribute>ImageProcessing</filterAttribute>
+          <filterAttribute>1.0</filterAttribute>
+          <toc>
+              <section title="image Processing" ref="index.html">
+
+                <section title="Caratteristiche pricipali dell'applicativo" ref="caratteristiche_principali.html">
+                 	<section title="Finestra principale" ref="finestra_principale.html"/>
+		  	<section title="Elementi salienti dell'interfaccia grafica" ref="caratteristiche_GUI.html"/>
+		  	<section title="Barra menu'" ref="barra_menu.html"/>
+			<section title="Casella Strumenti" ref="bar_GUI.html"/>
+                        <section title="Barra di stato" ref="barra_stato.html"/>
+              	                </section>
+                  	
+                        <section title="Brevi richiami di Elaborazione delle Immagini" ref="brevi_richiami.html">
+			<section title="Trasformazioni puntuali" ref="trasformazioni_puntuali.html"/>
+			<section title="Istogramma ed equalizzazione" ref="istogramma_equalizzazione.html"/>
+			<section title="Operatore di Sobel" ref="operatore_sobel.html"/>
+			<section title="Operatore di Laplace" ref="operatore_laplaciano.html"/>
+			<section title="Filtri passa basso" ref="filtri_passa_basso.html"/>
+			<section title="Operazioni morfologiche" ref="operatori_morfologici.html"/>
+              	                </section>
+
+			<section title="Elaborazioni disponibili" ref="elaborazioni.html">
+			<section title="Equalizza" ref="equalize.html"/>
+			<section title="Istogramma" ref="histogram.html"/>
+			<section title="Negativo" ref="negativo.html"/>
+			<section title="Logaritmica" ref="logaritmica.html"/>
+			<section title="Logaritmica inversa" ref="logaritmica_inversa.html"/>
+			<section title="Potenza" ref="potenza.html"/>
+			<section title="Slice" ref="slice.html"/>
+			
+                              <section title="Filtri basati su derivata" ref="basati_derivata.html">
+			        <section title="Operatore di Sobel" ref="sobel.html"/>
+			        <section title="Operatore di Laplace" ref="laplaciano.html"/>
+             	              </section>
+
+			      <section title="Filtri passa basso" ref="passa_basso.html">
+			        <section title="Blur semplice" ref="blur.html"/>
+			        <section title="Gaussiano" ref="gaussiano.html"/>
+			        <section title="Mediano" ref="mediano.html"/>
+			        <section title="Bilaterale" ref="bilaterale.html"/>
+                              </section>
+
+			      <section title="Operazioni morfologiche" ref="morfologiche.html">
+			        <section title="Erodi" ref="erosione.html"/>
+			        <section title="Dilata" ref="dilata.html"/>
+               	              </section>
+              	       
+                     </section>
+              	</section>
+          </toc>
+          <keywords>
+	      <keyword name="menu" ref="barra_menu.html"/>
+ 	      <keyword name="stato" ref="barra_stato.html"/>
+	      <keyword name="derivata" ref="basati_derivata.html"/>
+	      <keyword name="bilaterale" ref="bilaterale.html"/>
+	      <keyword name="blur" ref="blur.html"/>
+	      <keyword name="richiami" ref="brevi_richiami.html"/>
+	      <keyword name="canny" ref="canny.html"/>
+	      <keyword name="strumenti" ref="bar_GUI.html"/>
+	      <keyword name="interfaccia" ref="caratteristiche_GUI.html"/>
+	      <keyword name="dilata" ref="dilata.html"/>
+	      <keyword name="equaliza" ref="equalize.html"/>
+	      <keyword name="erosione" ref="erosione.html"/>
+	      <keyword name="passa basso" ref="filtri_passa_basso.html"/>
+	      <keyword name="generalita'" ref="finestra_principale.html"/>
+	      <keyword name="gaussiano" ref="gaussiano.html"/>
+	      <keyword name="istogramma" ref="histogram.html"/>
+	      <keyword name="istogramma equalizzazione" ref="istogramma_equalizzazione.html"/>
+	      <keyword name="laplaciano" ref="laplaciano.html"/>
+	      <keyword name="logaritmica inversa" ref="logaritmica_inversa.html"/>
+	      <keyword name="logaritmica" ref="logaritmica.html"/>
+	      <keyword name="mediano" ref="mediano.html"/>
+	      <keyword name="morfologiche" ref="doc.morfologiche.html"/>
+	      <keyword name="negativo" ref="negativo.html"/>
+	      <keyword name="laplaciano" ref="operatore_laplaciano.html"/>
+	      <keyword name="sobel" ref="operatore_sobel.html"/>
+	      <keyword name="operatori morfologici" ref="operatori_morfologici.html"/>
+	      <keyword name="passa basso" ref="passa_basso.html"/>
+	      <keyword name="potenza" ref="potenza.html"/>
+	      <keyword name="slice" ref="slice.html"/>
+	      <keyword name="sobel" ref="sobel.html"/>
+	      <keyword name="trasformazioni puntuali" ref="trasformazioni_puntuali.html"/>
+          </keywords>
+
+          <files>
+		<file>barra_menu.html</file>
+		<file>barra_stato.html</file>
+		<file>basati_derivata.html</file>
+		<file>bilaterale.html</file>
+		<file>blur.html</file>
+		<file>brevi_richiami.html</file>
+		<file>canny.html</file>
+		<file>caratteristiche_GUI.html</file>
+		<file>caratteristiche_principali.html</file>
+		<file>bar_GUI.html</file>
+		<file>dilata.html</file>
+		<file>elaborazioni.html</file>
+		<file>equalize.html</file>
+		<file>erosione.html</file>
+		<file>filtri_passa_basso.html</file>
+		<file>finestra_principale.html</file>
+		<file>gaussiano.html</file>
+		<file>histogram.html</file>
+		<file>index.html</file>
+		<file>istogramma_equalizzazione.html</file>
+		<file>laplaciano.html</file>
+		<file>logaritmica_inversa.html</file>
+		<file>logaritmica.html</file>
+		<file>mediano.html</file>
+		<file>morfologiche.html</file>
+		<file>negativo.html</file>
+		<file>operatore_laplaciano.html</file>
+		<file>operatore_sobel.html</file>
+		<file>operatori_morfologici.html</file>
+		<file>passa_basso.html</file>
+		<file>potenza.html</file>
+		<file>slice.html</file>
+		<file>sobel.html</file>
+		<file>trasformazioni_puntuali.html</file>
+
+		<file>style.css</file>
+
+
+		<file>images/barra_stato.jpg</file>
+		<file>images/equalizzazione.jpg</file>
+		<file>images/file_menu.jpg</file>
+		<file>images/filtri_menu.jpg</file>
+		<file>images/funzione_canny.jpg</file>
+		<file>images/gui_app.jpg</file>
+		<file>images/Laplace_Operator_Tutorial_Theory_ddIntensity.jpg</file>
+		<file>images/Laplace_Operator_Tutorial_Theory_Previous.jpg</file>
+		<file>images/laplacian_formula.jpg</file>
+		<file>images/logarithm_diagram.jpg</file>
+		<file>images/median_panel.jpg</file>
+		<file>images/menu_aiuto.jpg</file>
+		<file>images/menu_bar.jpg</file>
+		<file>images/menu_istogramma.jpg</file>
+		<file>images/menu_modifica.jpg</file>
+		<file>images/menu_morfologia.jpg</file>
+		<file>images/menu_roi.jpg</file>
+		<file>images/menu_trasformazioni_puntuali.jpg</file>
+		<file>images/menu_visualizza.jpg</file>
+		<file>images/Morphology_1_Tutorial_Theory_Dilation.png</file>
+		<file>images/Morphology_1_Tutorial_Theory_Erosion.png</file>
+		<file>images/Morphology_1_Tutorial_Theory_Original_Image.png</file>
+                <file>images/panel_bilateral.jpg</file>
+		<file>images/panel_blur.jpg</file>
+		<file>images/panel_dilate.jpg</file>
+		<file>images/panel_erodi.jpg</file>
+		<file>images/panel_gaussian.jpg</file>
+		<file>images/panel_laplace.jpg</file>
+		<file>images/panel_median.jpg</file>
+		<file>images/panel_openig-closing.jpg</file>
+		<file>images/panel_potenza.jpg</file>
+		<file>images/panel_slice.jpg</file>
+		<file>images/panel_sobel.jpg</file>
+		<file>images/pannelli.jpg</file>
+		<file>images/pannelli2.jpg</file>
+		<file>images/pannello_indagine.jpg</file>
+		<file>images/pannello principale.jpg</file>
+		<file>images/power_diagram.jpg</file>
+		<file>images/slice_diagram.jpg</file>
+		<file>images/smooth_gaussian.jpg</file>
+		<file>images/smooth_kernel.jpg</file>
+		<file>images/smooth_output_pixel.jpg</file>
+		<file>images/Smoothing_Tutorial_theory_gaussian_0.jpg</file>
+		<file>images/Sobel_Derivatives_Tutorial_Theory_0.jpg</file>
+		<file>images/Sobel_Derivatives_Tutorial_Theory_dIntensity_Function.jpg</file>
+		<file>images/Sobel_Derivatives_Tutorial_Theory_Intensity_Function.jpg</file>
+		<file>images/sobel_formula_1.jpg</file>
+		<file>images/sobel_formula_2.jpg</file>
+		<file>images/sobel_formula_3.jpg</file>
+		<file>images/sobel_formula_4.jpg</file>
+		<file>images/sobel_formula_5.jpg</file>
+		<file>images/sobel_formula_6.jpg</file>
+          </files>
+      </filterSection>
+  </QtHelpProject>

@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <title>Operatori Morfologici</title>
+
+
+  <link rel="stylesheet" href="style.css" type="text/css">
+
+</head>
+
+
+<body>
+
+<h2>Operazioni morfologiche</h2>
+
+<p>Si tratta di operazioni che elaborano con algoritmi che si
+basano sulle forme.</p>
+
+<p>L&rsquo;elaborazione di immagini &egrave; un tipo di
+elaborazione che modifica la forma o la struttura spaziale degli
+oggetti bidimensionali nell&rsquo;immagine e si basa sulla teoria
+degli
+insiemi. Nomalmente si applica a immagini binarie,
+Tipiche operazioni morfologiche sono: la <b>dilatazione</b>
+e l'<b>erosione</b> e combinazioni di queste come
+l&rsquo;<b>opening</b> o il <b>closing</b>.</p>
+
+<p>Una delle definizioni di erosione e dilatazione si basa sugli
+effetti
+dell'applicazione di un elemento strutturale che agisce sulla forma
+oggetto dell'elaborazione.</p>
+
+<p>Introdurremo i concetti di erosione e dilatazione usando
+quello proposto
+dal documentazione delle <a href="https://docs.opencv.org/3.4/db/df6/tutorial_erosion_dilatation.html">librerie
+opencv</a> </p>
+
+<div id="image"><img style="width: 112px; height: 150px;" src="images/Morphology_1_Tutorial_Theory_Original_Image.png" alt="Morfologia"></div>
+
+<h3>Dilazione</h3>
+
+<p>La dilatazione consiste nel convoluire un'immagine A con un
+kernel
+assegnato, che in linea di principio pu&ograve; avere dimesione e
+forma qualsiasi, ma di solito &egrave; un quadrato o un cerchio.
+Il kernel B posside un ben definito punto di ancoraggio, normalmente
+posto al centro del kernel.
+Quando si scansiona l'immagine con il kernel B si calcola il massimo
+valore dei pixel ricoperti da B e si sostituisce il pixel dell'immagine
+corrispondente al punto di ancoraggio con tale massimo. E' facile
+dedurre che questa operazione determina un aumento delle regioni
+pi&ugrave; luminose, da cui il nome dilatazione.&nbsp;</p>
+
+<p>L'operazione dilatazione pu&ograve; essere espressa come:</p>
+
+<p>
+</p>
+<div id="formula2"><b>dst</b> (x,y) = <b>max
+</b><small><sub>(x', y'):<b>element</b>(x'
+,y')&ne;0</sub></small> <b>src</b>
+(x+x',y+y')</div>
+
+<p></p>
+
+<div id="image"><img style="width: 112px; height: 150px;" src="images/Morphology_1_Tutorial_Theory_Original_Image.png" alt="Dilatazione"></div>
+
+<h3>Erosione</h3>
+
+<p>L'operazione di erosione calcola invece il minimo locale
+ricoperta
+dall'are di un kernel assegnato. Quando si scansiona l'immagine con il
+kernel B si calcola il minimo valore dei pixel ricoperti da B e si
+sostituisce il pixel dell'immagine corrispondente al punto di
+ancoraggio con tale minimo. L'operazione erosione pu&ograve; essere
+espressa come:</p>
+
+<p></p>
+
+<div id="formula2"><b>dst</b> (x,y) =<b>
+min </b><small><sub>(x',
+y'):<b>element</b>(x'
+,y')&ne;0 </sub></small><b>src</b>
+(x+x',y+y')&nbsp;</div>
+
+<p></p>
+
+<p>Con l'applicazione dell'operazione di erosione le aree
+pi&ugrave;
+luminose divengono pi&ugrave; sottili.</p>
+
+<div id="image"><img style="width: 112px; height: 150px;" src="images/Morphology_1_Tutorial_Theory_Erosion.png" alt="Erosione"></div>
+
+<p>La combinazione di n cicli di erosione seguita da m cicli di
+dilatazione &egrave; detta <b>opening</b>, in
+riferimento
+alla sua capacit&agrave; di separare forme che si toccano.<br>
+
+La combinazione contraria all&rsquo;opening, ovvero dilatazione
+seguita da erosione, &egrave; detta <b>closing</b>, in
+riferimento alla sua capacit&agrave; di unire forme vicine.</p>
+
+</body>
+</html>

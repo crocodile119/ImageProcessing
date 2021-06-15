@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>sobel</title>
+
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+<h2>Operatore di Sobel </h2>
+<p>Una delle applicazioni più importanti della
+convoluzione in Image Processing è il calcolo delle derivate
+in un&#8217;immagine (o se si vuole il calcolo di una loro
+approssimazione).
+Perché può
+essere utile il calcolo delle derivate di un&#8217;immagine?
+Supponiamo di voler individuare i contorni presenti di
+un&#8217;immagine cioè di voler <em>estrarre i
+contorni</em>. </p>
+<p>Ad esempio:</p>
+<div id="image"><img style="width: 200px; height: 240px;" src="images/Sobel_Derivatives_Tutorial_Theory_0.jpg" alt="Lena"></div>
+<p>E&#8217; possibile verificare
+che per l&#8217;<em>estrazione dei contorni</em>,
+l&#8217;intensità del pixel <em>cambia</em>
+con legge nota. Un buon metodo per esprimere le <em>variazioni</em>
+si ottiene per l&#8217;appunto impiegando le <em>derivate</em>.
+Una variazione elevata del gradiente indica un maggiore variazione
+delle intensità dei pixel dell&#8217;immagine.</p>
+<p>Per l&#8217;interpretazione grafica del fenomeno si assuma
+di avere un&#8217;immagine ad una dimensione. In questo caso il
+contorno è il "salto" diintensità così
+come riportata nella figura seguente:</p>
+<div id="image"> <img style="width: 300px; height: 218px;" src="images/Sobel_Derivatives_Tutorial_Theory_Intensity_Function.jpg" alt="gradino"></div>
+<p>Il salto del contorno "jump" can
+essere individuato più smplicemente se si calcola la
+derivata prina&nbsp;&nbsp;(in questo caso il contorno appare
+come il massimo della derivata)</p>
+<div id="image"> <img style="width: 300px; height: 221px;" src="images/Sobel_Derivatives_Tutorial_Theory_dIntensity_Function.jpg" alt="derivata prima del gradino"></div>
+<p>Da quanto esposto appare chiaro che è possibile
+dedurre&nbsp;un metodo per l'estrazione dei contorni in un'immagine
+individuando quei pixel per i quali il gradinte risulta maggiore dei
+pixel ad esso vicini (oppure se si vuole generalizzare, superiore ad
+una soglia).</p>
+<h3>L'operatore di Sobel</h3>
+<p>L'operatore di Sobel è un operatore discreto di
+derivazione che calcola una approssimazione del gradiente
+dell'intensità di un'immagine.</p>
+<p>Nella pratica l'operatore di Sobel combina all'operazione di
+derivazione quello di &nbsp;riduzione del rumore con smoothing
+gaussiano.</p>
+<h4>Formulazione</h4>
+<p>Indicata con <b>I</b> l'immagine da elaborare:</p>
+<ol type="1">
+<li>
+<p>Vengono calcolate due derivate::</p>
+<ol type="a">
+<li><b>Variazioni in direzione orizzonatale</b>:
+E' calcolata convolendo&nbsp;&nbsp;<span style="font-weight: bold;">I</span>&nbsp; con un
+nocciolo,<span style="font-style: italic;"> kernel</span>,&nbsp;&nbsp;<span style="font-weight: bold;">Gx&nbsp;</span> con
+dimensioni dispari. Ad esempio per un kernel di dimensioni pari a 3, <span style="font-weight: bold;">Gx</span> sarà
+calcolata come:</li>
+<div id="image"> <img style="width: 190px; height: 95px;" src="images/sobel_formula_1.jpg" alt="kernel di Sobel per variazioni orizzontali"></div>
+<li><b>Variazioni in direzione verticale</b>:
+Si calcola convolendo&nbsp;<span style="font-weight: bold;">I</span>
+con un kernel&nbsp;<span style="font-weight: bold;">Gy</span>
+di dimensioni dispari.Ad esempio ,&nbsp; per un kernel di
+dimensioni pari a 3, <span style="font-weight: bold;">Gx</span>
+sarà calcolata come:</li>
+<div id="image"> <img style="width: 205px; height: 85px;" src="images/sobel_formula_2.jpg" alt="kernel di Sobel per variazioni verticali"></div>
+</ol>
+</li>
+<li>
+<p>Per ciascun punto dell'immagine si
+calcola il&nbsp;<em>gradiente&nbsp;</em>in
+quel punto combinando i due risultati mostrati precedentemente:</p>
+<div id="image"> <img style="width: 129px; height: 38px;" src="images/sobel_formula_3.jpg" alt="calcolo del gradiente"></div>
+<p ="">sebbene in alcune circostanza venga
+impiegata la formula simplificata:</p>
+<div id="image"> <img style="width: 123px; height: 37px;" src="images/sobel_formula_4.jpg" alt="calcolo approssimato del gradiente"></div>
+</li>
+</ol>
+<dt>Nota:</dt>
+<p>Quando la dimensione del kernel è pari a,il
+kernel di Sobel mostrato precedentemente può produrre dei
+risultati poco precisi (dopo di tutto, Sobel è solo
+un'approssimazione dell'operazione di derivata). Per i kernel kernel di
+dimensione pari a 3 OpenCV gestisce tale
+imprecisione&nbsp;impigando la funzione di <span style="font-weight: bold;">Scharr</span>. La funzione
+di Scharr risulta altrettanto rapida ma più precisa dello
+standad di&nbsp;Sobel La funzione di Scharr è
+implementata impiegando i seguenti kernel per rispettivamente per
+variazioni orizzontali e verticali:</p>
+<div id="image"><img style="width: 182px; height: 74px;" src="images/sobel_formula_5.jpg" alt="Sobel_Derivatives_Tutorial_Theory_dIntensity_Function.jpg"></div>
+<div id="image"><img style="width: 182px; height: 75px;" src="images/sobel_formula_6.jpg" alt="Sobel_Derivatives_Tutorial_Theory_dIntensity_Function.jpg"></div>
+<p>Vedi anche: <a href="operatore_laplaciano.html">Richiami
+sull'operatore
+di Laplace</a>.</p>
+</body></html>
